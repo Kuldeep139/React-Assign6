@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const store=createContext()
 
-const Detail = (props) => {
+const Details = (props) => {
 
     const [students,setStudents]=useState([
 
@@ -74,4 +74,4 @@ const Detail = (props) => {
   )
 }
 
-export default Detail
+export default Details

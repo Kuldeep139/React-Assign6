@@ -4,20 +4,18 @@ import { Link } from "react-router-dom";
 import { store } from './Details'
 
 
-const Students = () => {
+const Student = () => {
   const [student] = useContext(store);
     return ( <>
 
     <h1>Student Details</h1>
-    
-    
 
         <div className='tab'>
         <table class="table table-hover">
         <thead>
         <br />
        
-        <Link to="/AddStudents">
+        <Link to="/AddStudent">
     <button className='btn'>Add Students</button>
     </Link>
         
@@ -38,7 +36,7 @@ const Students = () => {
             <td>{student.Course}</td>
             <td>{student.Batch}</td>
             <td>
-              <Link to="/Addstudent">Edit</Link>
+              <Link to={`/Edit/${student.id}`}>Edit</Link>
             </td>
           </tr>
         ))}
@@ -52,4 +50,4 @@ const Students = () => {
      );
 }
  
-export default Students;
+export default Student;

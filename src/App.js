@@ -3,11 +3,13 @@ import './components/style.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import Home from './components/Home';
-import Students from './components/Students';
+import Student from './components/Student';
 import Contact from './components/Contact';
 import NavigationBar from './components/NavBar';
-import AddStudents from './components/AddStudent';
+import AddStudent from './components/AddStudent';
 import Details from './components/Details'
+import Edit from './components/Edit';
+
 
 function App() {
   return (
@@ -17,10 +19,11 @@ function App() {
       <NavigationBar/>
       <Routes>
         <Route path ='Home' element={<Home/>}/>
-        <Route path ='Students' element={<Students/>}/>
+        <Route path ='Student' element={<Student/>}/>
         <Route path ='Contact' element={<Contact/>}/>
-        <Route path ='AddStudents'element={<AddStudents/>}/>
-      </Routes>
+        <Route path ='AddStudent'element={<AddStudent/>}/>
+        <Route path ='/Edit/:id' element={<Edit/>}/>
+        </Routes>
       </BrowserRouter>
       
     </div>
