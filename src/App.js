@@ -6,9 +6,9 @@ import Home from './components/Home';
 import Student from './components/Student';
 import Contact from './components/Contact';
 import NavigationBar from './components/NavBar';
-import AddStudent from './components/AddStudent';
 import Details from './components/Details'
-import Edit from './components/Edit';
+import EditStudent from './components/EditStudent';
+import NewStudents from './components/NewStudents';
 
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
         <Route path ='Home' element={<Home/>}/>
         <Route path ='Student' element={<Student/>}/>
         <Route path ='Contact' element={<Contact/>}/>
-        <Route path ='AddStudent'element={<AddStudent/>}/>
-        <Route path ='/Edit/:id' element={<Edit/>}/>
+        <Route path ='/EditStudent/:id' element={<EditStudent/>}/>
+        <Route path = "/NewStudents" element={<NewStudents/>}/>
         </Routes>
       </BrowserRouter>
       

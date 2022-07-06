@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { store } from './Details'
+import { add } from './Details'
 
 
 const Student = () => {
-  const [student] = useContext(store);
+  const [student] = useContext(add);
     return ( <>
 
     <h1>Student Details</h1>
@@ -15,7 +15,7 @@ const Student = () => {
         <thead>
         <br />
        
-        <Link to="/AddStudent">
+        <Link to="/NewStudents">
     <button className='btn'>Add Students</button>
     </Link>
         
@@ -36,7 +36,7 @@ const Student = () => {
             <td>{student.Course}</td>
             <td>{student.Batch}</td>
             <td>
-              <Link to={`/Edit/${student.id}`}>Edit</Link>
+              <Link to={`/EditStudent/${student.id}`}>Edit</Link>
             </td>
           </tr>
         ))}

@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 
-export const store=createContext()
+export const add =createContext()
 
 const Details = (props) => {
 
@@ -62,9 +62,9 @@ const Details = (props) => {
 
 
 
-<store.Provider  value={[students,setStudents]}>
+<add.Provider  value={[students,setStudents]}>
     {props.children}
-</store.Provider>
+</add.Provider>
 
 
 

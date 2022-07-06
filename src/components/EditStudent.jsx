@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { store } from './Details'
+import { add } from './Details'
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./style.css";
@@ -15,7 +15,7 @@ const Edit = () => {
 
   const { id } = useParams();
 
-  const [students, setStudents] = useContext(store);
+  const [students, setStudents] = useContext(add);
 
   const ChangeHandlerName = (e) => {
     setName(e.target.value);
@@ -42,8 +42,8 @@ const Edit = () => {
 
   const SubmitHandler = () => {
     setStudents((previousV) =>
-      previousV.map((store) =>
-        store.id === id
+      previousV.map((add) =>
+        add.id === id
           ? {
               id: id,
               Name: name,
@@ -51,13 +51,13 @@ const Edit = () => {
               Batch: batch,
               Course: course,
             }
-          : store
+          : add
       )
     );
   };
 
   return (
-    <div style={{display:'flex', justifyContent:'center'}}>
+    <div style={{display:'flex',flexDirection:'column' , justifyContent:'center'}}>
       <form style={{ marginTop: "25px" }}>
         <label>Name:</label>
             <input id="name" type="text" name='name' value={name} onChange={ChangeHandlerName} />
